@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "learning-service"
+version = "0.1.0"
+description = "Tracklore's AI-powered personalized learning service."
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [{ include = "app" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+# Web framework
+fastapi = "*"
+uvicorn = { extras = ["standard"], version = "*" }
+
+# Data & config
+pydantic = "*"
+python-dotenv = "*"
+
+# LLM & embeddings
+openai = "*"         # or anthropic = "*" if using Claude
+tiktoken = "*"
+
+# Vector DB client (choose one)
+qdrant-client = "*"
+# weaviate-client = "*"
+# pinecone-client = "*"
+
+# HTTP requests
+httpx = "*"
+
+# Logging
+structlog = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+pytest-asyncio = "*"
+black = "*"
+isort = "*"
+mypy = "*"
+ruff = "*"
+
+[tool.poetry.scripts]
+dev = "app.main:run_dev"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+  

@@ -1,0 +1,28 @@
+# Web Framework
+fastapi==0.115.0
+uvicorn[standard]==0.30.3
+
+# Data & Config
+pydantic==2.8.2
+python-dotenv==1.0.1
+
+# LLM & Embeddings
+openai==1.42.0        # For GPT-4o/GPT-4o-mini (or replace with anthropic if using Claude)
+tiktoken==0.7.0       # Tokenizer for OpenAI models
+
+# Vector Database (choose one, keep if needed)
+qdrant-client==1.9.0  # Lightweight vector DB client
+# weaviate-client==3.26.3
+# pinecone-client==4.1.0
+
+# HTTP Requests (for external APIs)
+httpx==0.27.2
+
+# Logging & Utilities
+structlog==24.3.0
+
+# Testing
+pytest==8.3.2
+pytest-asyncio==0.24.0
+httpx[cli]==0.27.2
+
