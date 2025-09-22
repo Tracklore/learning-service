@@ -27,7 +27,9 @@ async def set_skill_level(request: SkillLevelRequest):
         response = SkillLevelResponse(
             path=curriculum.path,
             curriculum_id=curriculum.curriculum_id,
-            modules=curriculum.modules
+            modules=curriculum.modules,
+            recommended_tutor_style=curriculum.recommended_tutor_style,
+            learning_objectives=curriculum.learning_objectives
         )
 
         return response

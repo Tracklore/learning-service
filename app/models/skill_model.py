@@ -1,3 +1,7 @@
+from pydantic import BaseModel
+from typing import List, Optional
+from app.models.curriculum_model import Module
+
 # ---------- Request / Response Models ----------
 class SkillLevelRequest(BaseModel):
     topic: str
@@ -6,4 +10,6 @@ class SkillLevelRequest(BaseModel):
 class SkillLevelResponse(BaseModel):
     path: str
     curriculum_id: str
-    modules: list[str]
+    modules: List[Module]
+    recommended_tutor_style: Optional[str] = None
+    learning_objectives: Optional[List[str]] = None
