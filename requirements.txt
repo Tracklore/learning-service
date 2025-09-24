@@ -9,6 +9,10 @@ python-dotenv==1.0.1
 # LLM & Embeddings
 openai==1.42.0        # For GPT-4o/GPT-4o-mini (or replace with anthropic if using Claude)
 tiktoken==0.7.0       # Tokenizer for OpenAI models
+google-generativeai==0.7.0  # For Gemini API
+
+# Google Cloud Services
+google-cloud-bigquery==3.25.0  # For BigQuery analytics
 
 # Vector Database (choose one, keep if needed)
 qdrant-client==1.9.0  # Lightweight vector DB client

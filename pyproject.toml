@@ -21,6 +21,10 @@ python-dotenv = "*"
 # LLM & embeddings
 openai = "*"         # or anthropic = "*" if using Claude
 tiktoken = "*"
+google-generativeai = "*"  # For Gemini API
+
+# Google Cloud Services
+google-cloud-bigquery = "*"  # For BigQuery analytics
 
 # Vector DB client (choose one)
 qdrant-client = "*"

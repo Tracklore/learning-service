@@ -1,3 +1,4 @@
+# app/models/curriculum_model.py
 from pydantic import BaseModel
 from typing import List, Optional
 
@@ -8,6 +9,7 @@ class Module(BaseModel):
     difficulty: str  # "easy", "medium", "hard"
     estimated_time_min: Optional[int] = None
     resources: Optional[List[str]] = None
+    description: Optional[str] = None
     embedding_vector: Optional[List[float]] = None  # For semantic search
 
 class Curriculum(BaseModel):
@@ -25,3 +27,7 @@ class LearningPath(BaseModel):
     progress: float = 0.0  # 0-100%
     completion_status: str = "incomplete"
 
+class CurriculumRequest(BaseModel):
+    subject: str
+    skill_level: str  # e.g., "beginner", "intermediate", "advanced"
+    path: str  # e.g., "newbie", "amateur", "pro"
